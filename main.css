@@ -30,8 +30,22 @@ a {
     text-decoration: none;
 }
 
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: rgb(196, 5, 196);
+    text-decoration-line: line-through;
+}
+
 a:hover {
     color: rgb(255, 0, 149);
     text-decoration: underline;
     text-shadow: 2cm;
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
 }
