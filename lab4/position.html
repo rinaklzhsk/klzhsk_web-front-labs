@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Калужская Ирина Витальевна. Лабораторная работа 4</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon-16x16.png">
+        <link rel="icon" href="favicon-32x32.png">
+
+        <style>
+            div {
+                width: 300px;
+                height: 70px;
+                line-height: 70px;
+                text-align: center;
+                background-color: white;
+                border: 1px dotted darkgreen;
+                margin: 15px;
+            }
+
+            .position-relative {
+                position: relative;
+                left: 140px;
+                top: -130px;
+                z-index: 1;
+            }
+
+            .position-static {
+                position: relative;
+                left: 0px;
+                top: 0px;
+                z-index: 2;
+            }
+
+            .position-relative:hover {
+                z-index: 3;
+            }
+
+            .position-absolute {
+                position: absolute;
+                left: 300px;
+            }
+
+            .position-absolute:hover {
+                transform: scale(1.1); 
+                background-color: rgb(230, 173, 227); 
+                box-shadow: 0 0 10px rgba(109, 0, 67, 0.5);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 4
+            <hr>
+        </header>
+
+        <main>
+            <div class="position-static">static</div>
+            <div class="position-static">static</div>
+            <div class="position-relative">relative</div>
+            <div>static</div>
+            <div>static</div>
+            <div class="position-absolute">absolute</div>
+            <div>static</div>
+            <div>static</div>
+            <div>static</div>
+            <div>static</div>
+        </main>    
+    </body>
+    
+    <footer>
+        <hr>
+        &copy; Калужская Ирина, ФБИ-21, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
