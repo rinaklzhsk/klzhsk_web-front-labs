@@ -16,15 +16,31 @@
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
         
+        function showAuthor() {
+            let author = 'Автор страницы:\nКалужская Ирина Витальевна';
+            alert(author);
+        }
+
+        function showFooterMessage() {
+            let message = 'Я выстрадала эту лабораторную\nА вам хорошего дня!';
+            alert(message);
+        }
     </script>
     <style>
         .message {
-            background-color: rgb(251, 38, 240); 
-            color:rgb(211, 212, 231); 
+            background-color: rgb(192, 48, 161); 
+            color:rgb(252, 252, 255); 
             margin:20px;
             padding: 5%;
             cursor: pointer;
             display: inline-block;
+            border-radius: 15px;
+            border: 3px solid rgb(70, 17, 58);
+            box-shadow: 4px 4px 8px rgba(99, 19, 66, 0.671);
+        }
+
+        footer {
+            cursor: grab;
         }
     </style>
 </head>    
@@ -36,10 +52,10 @@
 
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer ondblclick="showFooterMessage()">
         &copy; Ирина Калужская, ФБИ-21, 2 курс, 2024
     </footer>
 </body>
