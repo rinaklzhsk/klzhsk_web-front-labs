@@ -20,6 +20,14 @@
                 text-align: center;
             }
             
+            #rules-list {
+                text-align: left;
+                list-style-type: none;
+                padding: 0;
+            }
+            #rules-list li {
+                margin-bottom: 5px;
+            }
         </style>
 
         <script>
@@ -80,6 +88,18 @@
                 // Очистка поля ввода
                 document.getElementById('user-number').value = ''; 
             }
+
+            function showRules() {
+                document.getElementById('show-rules').style.display = 'none';
+                document.getElementById('hide-rules').style.display = 'inline';
+                document.getElementById('rules-list').style.display = 'block';
+            }
+            
+            function hideRules() {
+                document.getElementById('hide-rules').style.display = 'none';
+                document.getElementById('show-rules').style.display = 'inline';
+                document.getElementById('rules-list').style.display = 'none';
+            }
         </script>
     </head>
 
@@ -116,6 +136,22 @@
             <div>
                 <button onclick="again()">Сыграть еще раз</button>
             </div>
+        </div>
+
+        <div class="game">
+            <button id="show-rules" onclick="showRules()">
+                Показать правила игры
+            </button>
+            <button id="hide-rules" onclick="hideRules()" style="display:none;">
+                Скрыть правила игры
+            </button>
+            <ul id="rules-list" style="display: none;">
+                <li>I. Я загадываю число от 1 до 100.</li>
+                <li>II. Ты пытаешься угадать это число, делая предположения.</li>
+                <li>III. После каждого твоего предположения я скажу, больше или меньше загаданное число по сравнению с твоим.</li>
+                <li>IV. Твоя цель – угадать число за наименьшее количество попыток.</li>
+                <li>V. Если ты угадал число, игра заканчивается.</li>
+            </ul>
         </div>
     </main>
 
