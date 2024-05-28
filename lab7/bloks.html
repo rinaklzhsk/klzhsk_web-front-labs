@@ -20,20 +20,45 @@
 
                 document.querySelector('main').appendChild(newBlock);
             }
+
+            function addNewBlocks() {
+                // Получаем значение из текстового поля
+                let numberOfBlocks = parseInt(document.getElementById('blockCountInput').value, 10);
+                if (isNaN(numberOfBlocks) || numberOfBlocks <= 0) {
+                    alert('Введите корректное количество блоков.');
+                    return;
+                }
+
+                let main = document.querySelector('main');
+                for(let i = 0; i < numberOfBlocks; i++) {
+                let newBlock = document.createElement('div');
+                    newBlock.style.backgroundColor = 'white';
+                    newBlock.style.height = '40px';
+                    newBlock.style.border = '3px solid black';
+                    newBlock.style.margin = '5px';
+                    newBlock.style.width = `${350 + 50 * i}px`;;
+                    newBlock.innerHTML = `Блок №' ${i+1}: 2*${i}<sup></sup> = ${2*i**2}`;
+
+                    main.appendChild(newBlock);
+                }
+            }
         </script>
     </head>
 
-<body>
-    <header>
-        НГТУ, ФБ, Лабораторная работа 7
-    </header>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 7
+        </header>
 
-    <main>
-        <button onclick="addNewBlock()">Добавить блок</button>
-    </main>
+        <main>
+            <input type="number" id="blockCountInput" min="1" placeholder="Введите количество блоков" style="margin-bottom: 10px;">
+            <br>
+            <button onclick="addNewBlock()">Добавить блок</button>
+            <button onclick="addNewBlocks()">Добавить блоки</button>
+        </main>
 
-    <footer>
-        &copy; Ирина Калужская, ФБИ-21, 2 курс, 2024
-    </footer>
-</body>
+        <footer>
+            &copy; Ирина Калужская, ФБИ-21, 2 курс, 2024
+        </footer>
+    </body>
 </html>
