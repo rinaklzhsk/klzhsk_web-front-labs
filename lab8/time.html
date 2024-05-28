@@ -8,23 +8,36 @@
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon-16x16.png">
         <link rel="icon" href="favicon-32x32.png">
+        
+        <script src="time.js"></script>
+
+        <style>
+            #time {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                font-size: 20px;
+                color: #120fdc;
+                font-family: 'Arial', sans-serif;
+            }
+            #seconds {
+                font-size: 100px;
+                color: #d63384;
+                text-align: center;
+                margin-top: 20px;
+            }
+        </style>
     </head>
 
-    <body>
+    <body onload="showTime()">
         <header>
             НГТУ, ФБ, Лабораторная работа 8
+            <div id="time">00:00:00</div>
+            <hr>
         </header>
 
         <main>
-            <li>
-                <a href="date.html">Дата</a>
-            </li>
-            <li>
-                <a href="get-days-count.html">Число дней с даты рождения</a>
-            </li>
-            <li>
-                <a href="time.html">Время</a>
-            </li>
+            <div id="seconds">00:00:00</div>
         </main>
 
         <footer>
