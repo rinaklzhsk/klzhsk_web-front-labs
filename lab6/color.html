@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Калужская Ирина Витальевна. Лабораторная работа 6</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon-16x16.png">
+        <link rel="icon" href="favicon-32x32.png">
+
+        <style>
+            div {
+                width: 300px;
+                line-height: 28px;
+                height: 90px;
+                text-align: center;
+                background-color: yellow;
+                margin: 0px auto;
+                cursor: grab;
+                transition: background-color 0.5s, color 0.5s;
+                border: 5px solid rgb(70, 17, 58);
+                border-radius: 20px;
+                
+            }
+        </style>
+
+        <script>
+            function changeColor(div) {
+            if(div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                document.getElementById('color-name').innerHTML = 'красный';
+                div.style.color = 'white';
+            }
+            else if(div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                document.getElementById('color-name').innerHTML = 'черный';
+                div.style.color = 'white';
+            }
+            else if(div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'pink';
+                document.getElementById('color-name').innerHTML = 'розовый';
+                div.style.color = 'black';
+            }
+            else if(div.style.backgroundColor == 'pink') {
+                div.style.backgroundColor = 'green';
+                document.getElementById('color-name').innerHTML = 'зеленый';
+                div.style.color = 'white';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'желтый';
+                div.style.color = 'black';
+            }
+        }
+        </script>
+    </head>
+
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
+    </main>
+
+    <footer>
+        &copy; Ирина Калужская, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
