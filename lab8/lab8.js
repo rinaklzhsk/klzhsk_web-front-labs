@@ -3,6 +3,7 @@ function showDate() {
     let today = new Date();
     out.innerHTML = `Дата и время для русской локали: ${today.toLocaleString('ru-RU')}<br>`;
 
+    // Создание объекта locales, содержащего коды локалей для разных стран
     let locales = {
         "Япония": 'ja-JP',
         "Бразилия": 'pt-BR',

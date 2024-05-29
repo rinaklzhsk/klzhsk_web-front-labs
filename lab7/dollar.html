@@ -12,8 +12,8 @@
         <script>
             function showExchange() {
                 const exchange = [
-                    60.2847, 60.0490, 60.2285, 60.8018, 60.7355, 60.9090,
-                    61.2868, 61.7208, 61.1333, 60.9802
+                    60.2847, 60.0490, 60.2285, 60.8018, 60.7355, 
+                    60.9090, 61.2868, 61.7208, 61.1333, 60.9802
                 ];
                 let table = document.getElementById('dollar-table');
                 for(let i = 0; i < exchange.length; i++) {
@@ -35,10 +35,8 @@
                 let detail = document.getElementById('detail');
                 detail.innerText = `Средний курс: ${average}`;
 
-                let button = document.querySelector('button');
-                if (button) {
-                    button.remove();
-                }
+                document.querySelector('button').remove();
+                
             }
         </script>
     </head>

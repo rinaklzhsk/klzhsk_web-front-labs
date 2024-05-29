@@ -11,7 +11,8 @@
         
         <script>
             function addNewBlock() {
-                let newBlock = document.createElement('div');
+                // создание элемента див
+                let newBlock = document.createElement('div'); 
                 newBlock.style.backgroundColor = 'white';
                 newBlock.style.height = '40px';
                 newBlock.style.border = '3px solid black';
@@ -23,7 +24,7 @@
 
             function addNewBlocks() {
                 // Получаем значение из текстового поля
-                let numberOfBlocks = parseInt(document.getElementById('blockCountInput').value, 10);
+                let numberOfBlocks = parseInt(document.getElementById('blockCountInput').value);
                 if (isNaN(numberOfBlocks) || numberOfBlocks <= 0) {
                     alert('Введите корректное количество блоков.');
                     return;
@@ -36,7 +37,7 @@
                     newBlock.style.height = '40px';
                     newBlock.style.border = '3px solid black';
                     newBlock.style.margin = '5px';
-                    newBlock.style.width = `${350 + 50 * i}px`;;
+                    newBlock.style.width = 350 + 50 * i +'px';
                     newBlock.innerHTML = `Блок №' ${i+1}: 2*${i}<sup></sup> = ${2*i**2}`;
 
                     main.appendChild(newBlock);
@@ -88,8 +89,7 @@
 
                 main.innerHTML = '';
 
-                let numberOfBlocks = 10;
-                for (let i = 1; i <= numberOfBlocks; i++) {
+                for (let i = 18; i <= 38; i+=3) {
 
                     let newBlock = document.createElement('div');
                     newBlock.style.width = '100px';
@@ -99,7 +99,7 @@
                     newBlock.style.border = '1px solid black';
 
                     // Устанавливаем значения прозрачности от 0% до 100%
-                    newBlock.style.opacity = i / numberOfBlocks;
+                    newBlock.style.opacity = i*10+10+'%';
 
                     newBlock.innerHTML = `Блок №${i}`;
 
@@ -109,7 +109,7 @@
 
             function createGreyPinkCircles() {
                 // Получаем значение из поля ввода
-                let numberOfCircles = parseInt(document.getElementById('circleCountInput').value, 10);
+                let numberOfCircles = parseInt(document.getElementById('circleCountInput').value);
 
                 if (isNaN(numberOfCircles) || numberOfCircles <= 0) {
                     alert('Введите корректное количество кругов.');
@@ -130,6 +130,7 @@
                     circle.style.textAlign = 'center';
                     circle.style.lineHeight = '40px';
 
+                    // если делится на 2 без остатка, то кргу серого цвета
                     if (i % 2 === 0) {
                         circle.style.backgroundColor = 'grey';
                     } else {

@@ -10,6 +10,7 @@
         <link rel="icon" href="favicon-32x32.png">
 
         <script>
+            // Функция для отображения информации о стоимости акций
             function showStockInfo() {
                 const dates = [
                     '15.05.2024', '16.05.2024', '17.05.2024', '20.05.2024', '21.05.2024',
@@ -21,11 +22,13 @@
 
                 let tbody = document.getElementById('stock-table').querySelector('tbody');
                 tbody.innerHTML = '';
-
+                
+                // Инициализация переменных для суммирования цен, поиска минимальной и 
+                // максимальной цен
                 let sum = 0;
                 let minPrice = prices[0];
                 let maxPrice = prices[0];
-
+                // Цикл для добавления строк в таблицу с информацией о цене за каждый день
                 for (let i = 0; i < prices.length; i++) {
                     let tr = document.createElement('tr');
 
@@ -42,6 +45,7 @@
                         tdDifference.innerText = '-';
                     } else {
                         let difference = prices[i] - prices[i - 1];
+                         // Округление разницы до двух знаков после запятой
                         tdDifference.innerText = difference.toFixed(2);
                     }
                     tr.appendChild(tdDifference);
