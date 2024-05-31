@@ -9,15 +9,50 @@
 
         <style>
             .menu {
-                position: fixed;
+                position: absolute;
                 top: 120px;
                 left: 8px;
                 width: 200px;
-                height: 100%;
+                height: 80%;
                 background-color: rgb(107, 0, 36);
                 color: white;
-                padding-top: 20px;
+                font-size: 25px;
+            }
+
+            .info {
                 font-size: 20px;
+                margin-left: 200px;
+            }
+
+            a {
+                position: fixed;
+                padding-left: 20px;
+            }
+
+            div.text div {
+                display: none;
+            }
+
+            h1:hover+div {
+                display: block;
+            }
+
+            .text {
+                width: 300px;
+                border: 3px solid  rgb(64, 1, 45);
+                display: inline-block;
+                vertical-align: top;
+                padding: 10px;
+                text-align: center;
+                margin: 15px;
+                margin-left: 220px;
+                border-radius: 20px;
+            }
+
+            .text:hover {
+                background-color: #e9baff31;
+                box-shadow: inset;
+                transition: 1s;
             }
         </style>
     </head>
@@ -28,17 +63,28 @@
         </header>
 
         <main>
-            <h1 style="text-align: center;">О компании</h1>
+            <h1 style="text-align: center;">Новости</h1>
             
 
             <div class="menu">
                 <a href="news.html">Новости</a><br>
                 <a href="currency.html">Курс валют</a><br>
-                <a href="contacts.html">Контактные данные</a><br>
+                <a href="contacts.html">Контакты</a><br>
                 <a href="video.html">Видео</a>
             </div>
 
-
+            <div class="text">
+                <h1>
+                    C 17 мая 2024 г., Интернет-Клиент-Банк (ИКБ) «Сапфир» (для ЮЛ и ИП) выводится из 
+                    эксплуатации.
+                </h1>
+                <div>
+                    D связи с этим, необходимо подключиться к новой системе «КТБ-Онлайн», если этого 
+                    еще не сделали ранее.
+                    По всем вопросам, связанным с переходом на новую систему «КТБ-Онлайн», просьба 
+                    обращаться в группу поддержки клиентов Интернет-Банка, по номеру 8(861)212-60-80, доб.4.
+                </div>
+            </div>
         </main>
 
         <footer>
