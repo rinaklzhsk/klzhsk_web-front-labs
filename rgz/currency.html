@@ -28,7 +28,10 @@
                 padding-left: 20px;
                 position: fixed;
             }
+            
         </style>
+
+        <script src="https://www.cbr-xml-daily.ru/money.js"></script>
     </head>
 
     <body>
@@ -36,12 +39,53 @@
             <img src="logo_04.png" alt="Официальный сайт АО &quot;Кубаньторгбанк&quot; г.Краснодар"><hr>
         </header>
 
-        <main>
+        <main style="margin-left: 400px;">
             <h1 style="text-align: center; font-size: 45px;">О компании</h1>
             
-            <div class="info">
-                
+            <script>
+                function convertCurrency() {
+                    // Получаем введенную сумму
+                    var amount = parseFloat(document.getElementById('amount').value);
+                    // Получаем выбранные валюты
+                    var fromCurrency = document.getElementById('fromCurrency').value;
+                    var toCurrency = document.getElementById('toCurrency').value;
+                    // Выполняем конвертацию
+                    var result = fx(amount).from(fromCurrency).to(toCurrency);
+                    // Отображаем результат
+                    document.getElementById('result').textContent = `${amount} ${fromCurrency} = ${result.toFixed(2)} ${toCurrency}`;
+                }
+            </script>
+        </head>
+        <body>
+            <h1>Конвертер валют</h1>
+            <div>
+                <label for="amount">Сумма:</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
             </div>
+            <div>
+                <label for="fromCurrency">Из валюты:</label>
+                <select id="fromCurrency" name="fromCurrency">
+                    <option value="USD">USD - Доллар США</option>
+                    <option value="EUR">EUR - Евро</option>
+                    <option value="GBP">GBP - Британский фунт</option>
+                    <option value="RUB">RUB - Российский рубль</option>
+                    <option value="SGB">SGB - Сингапурский Доллар</option>
+                    
+                </select>
+            </div>
+            <div>
+                <label for="toCurrency">В валюту:</label>
+                <select id="toCurrency" name="toCurrency">
+                    <option value="USD">USD - Доллар США</option>
+                    <option value="EUR">EUR - Евро</option>
+                    <option value="GBP">GBP - Британский фунт</option>
+                    <option value="RUB">RUB - Российский рубль</option>
+                    <option value="SGD">SGB - Сингапурский Доллар</option>
+
+                </select>
+            </div>
+            <button onclick="convertCurrency()">Конвертировать</button>
+            <h2 id="result"></h2>
 
             <div class="menu">
                 <a href="news.html">Новости</a><br>
@@ -50,8 +94,6 @@
                 <a href="video.html">Видео</a><br>
                 <a href="main.html">На главную</a>
             </div>
-
-
         </main>
 
         <footer>
