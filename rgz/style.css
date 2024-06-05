@@ -1,0 +1,40 @@
+body {
+    background-color: white; 
+    color: rgb(44, 44, 44); 
+    font-family: Arial; 
+    margin: 0px"
+}
+
+header {
+    background-color: rgb(107, 0, 36); 
+    color:white; 
+    padding: 20px; 
+    font-size: 15pt;
+}
+
+main {
+    background-color: rgb(255, 255, 255); 
+    color:rgb(30, 2, 39); 
+    font-family: Arial;
+    margin:20px 40px 86px
+}
+footer {
+    background-color:  rgb(107, 0, 36); 
+    color:rgb(255, 255, 255); 
+    padding: 20px; font-size: 8pt;  
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    }
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 196, 0);
+    text-decoration: underline;
+}
