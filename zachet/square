@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>квадрат</title>
+        <style>
+            #square {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: background-color 0.5s ease;
+            }
+
+            #square:hover {
+                background-color: red;
+                animation: rotate 2s linear 3;
+            }
+        </style>
+    </head>
+<body>
+    <main>
+        <div id="square"></div>
+    </main>
+</body>
+</html>
